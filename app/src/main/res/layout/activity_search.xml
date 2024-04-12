@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey_f3f3f3">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/iv_search_activity_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:src="@mipmap/it_back"
+            />
+        <EditText
+            android:id="@+id/et_search_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/iv_search_activity_back"
+            android:hint="@string/hint_search"
+            android:layout_marginStart="10dp"
+            android:paddingStart="15dp"
+            android:background="@drawable/dialog_button_background"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+            <requestFocus/>
+        </EditText>
+        <ImageView
+            android:id="@+id/iv_search_activity_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/search"
+            android:layout_toStartOf="@id/et_search_activity"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="10dp"/>
+
+    </RelativeLayout>
+
+    <!--没有内容显示 其他 页面竟然是这么解决的-->
+<ListView
+    android:id="@+id/lv_search_activity"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:dividerHeight="6dp"
+    android:divider="@color/blue_00BCD4"
+    />
+    
+    <TextView
+        android:id="@+id/tv_search_activity_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_text_view"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:drawableTop="@mipmap/it_searchtext"
+        android:layout_marginTop="250dp"/>
+
+
+
+</LinearLayout>

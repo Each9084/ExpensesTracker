@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">ExpenseTrack Assistant</string>
+    <string name="edit">start</string>
+    <string name="monthly_expenses">monthly expenses</string>
+    <string name="monthly_income">monthly income</string>
+    <string name="remaining_budget">remaining budget</string>
+    <string name="item_else">else</string>
+    <string name="View_table">View table</string>
+    <string name="add_notes">add notes</string>
+    <string name="dialog_note_hint">Please enter remarks here</string>
+    <string name="dialog_note_confirm">Confirm</string>
+    <string name="dialog_note_cancel">Cancel</string>
+    <string name="dialog_time_input">Please enter time(24h)</string>
+    <string name="set_budget">Set budget</string>
+    <string name="gbp">£</string>
+    <string name="hint_search">Enter what you want to search for</string>
+    <string name="empty_text_view">No record</string>
+    <string name="about">About</string>
+    <string name="setting">Setting</string>
+    <string name="history_record">Historical Tracking</string>
+    <string name="transaction_info">Transaction Details</string>
+    <string name="history_info">This month’s expenses</string>
+
+    <!--数据库分类 支出-->
+    <string name="expenses_category1">Else</string>
+    <string name="expenses_category2">Food</string>
+    <string name="expenses_category3">Shopping</string>
+    <string name="expenses_category4">Clothing</string>
+    <string name="expenses_category5">Traffic</string>
+    <string name="expenses_category6">Necessities</string>
+    <string name="expenses_category7">Amusement</string>
+    <string name="expenses_category8">Snack</string>
+    <string name="expenses_category9">Cigarettes</string>
+    <string name="expenses_category10">Alcohol</string>
+    <string name="expenses_category11">Study</string>
+    <string name="expenses_category12">Health</string>
+    <string name="expenses_category13">Residence</string>
+    <string name="expenses_category14">Utilities</string>
+    <string name="expenses_category15">Communication</string>
+    <string name="Delete_all_records">Delete all records</string>
+    <string name="chart_title">Details Page</string>
+    <string name="expenses">Expenses</string>
+    <string name="income">income</string>
+    <string name="no_data">No Data</string>
+
+    <!--java-->
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="warning">Warning</string>
+    <string name="warning_content_delete_all_record1">Are you sure you want to delete all records? </string>
+    <string name="warning_content_delete_all_record2">The operation cannot be changed.</string>
+    <string name="successfully_deleted">Successfully Deleted</string>
+    <string name="invoice">invoice:</string>
+    <string name="there_are">There are</string>
+    <string name="incomes_here">incomes here</string>
+    <string name="point1">.1</string>
+    <string name="point15">.15</string>
+    <string name="point28">.28</string>
+    <string name="point31">.31</string>
+    <string name="point30">.30</string>
+
+    <!--数据库分类  收入-->
+    <string name="income_category1">Else</string>
+    <string name="income_category2">Salary</string>
+    <string name="income_category3">Bonus</string>
+    <string name="income_category4">Loan</string>
+    <string name="income_category5">Debt</string>
+    <string name="income_category6">Interest</string>
+    <string name="income_category7">Investment</string>
+    <string name="income_category8">Transaction</string>
+    <string name="income_category9">Windfall</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
