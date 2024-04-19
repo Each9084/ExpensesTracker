@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">ExpenseTrack Assistant</string>
+    <string name="toggle_theme">Toggle Theme</string>
+
+    <!--ExpenseTrack Assistant-->
     <string name="edit">start</string>
     <string name="monthly_expenses">monthly expenses</string>
     <string name="monthly_income">monthly income</string>
@@ -17,9 +20,16 @@
     <string name="empty_text_view">No record</string>
     <string name="about">About</string>
     <string name="setting">Setting</string>
+    <string name="details">Details</string>
     <string name="history_record">Historical Tracking</string>
     <string name="transaction_info">Transaction Details</string>
     <string name="history_info">This month’s expenses</string>
+    <string name="history">History</string>
+    <string name="clear">Clear</string>
+    <string name="del">Del</string>
+    <string name="year">.</string>
+    <string name="month">.</string>
+    <string name="day">.</string>
 
     <!--数据库分类 支出-->
     <string name="expenses_category1">Else</string>
@@ -40,24 +50,31 @@
     <string name="Delete_all_records">Delete all records</string>
     <string name="chart_title">Details Page</string>
     <string name="expenses">Expenses</string>
-    <string name="income">income</string>
+    <string name="income">Income</string>
     <string name="no_data">No Data</string>
 
     <!--java-->
+    <string name="Else">Else</string>
     <string name="cancel">Cancel</string>
     <string name="confirm">Confirm</string>
+    <string name="iconfirm">I confirm !</string>
     <string name="warning">Warning</string>
+    <string name="warning_content_delete_one_item">Are you sure you want to delete this record?</string>
     <string name="warning_content_delete_all_record1">Are you sure you want to delete all records? </string>
     <string name="warning_content_delete_all_record2">The operation cannot be changed.</string>
     <string name="successfully_deleted">Successfully Deleted</string>
     <string name="invoice">invoice:</string>
     <string name="there_are">There are</string>
     <string name="incomes_here">incomes here</string>
+    <string name="expenses_here">expenses here</string>
     <string name="point1">.1</string>
     <string name="point15">.15</string>
     <string name="point28">.28</string>
     <string name="point31">.31</string>
     <string name="point30">.30</string>
+    <string name="today_expenses_is">Today’s expenses: </string>
+    <string name="today_income_is">  Today’s income:  </string>
+    <string name="input_cannot_be_empety">Please enter the amount</string>
 
     <!--数据库分类  收入-->
     <string name="income_category1">Else</string>

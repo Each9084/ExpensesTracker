@@ -33,32 +33,32 @@ public class DBOpenHelper extends SQLiteOpenHelper {
     private void insertType(SQLiteDatabase db) {
         //向typedb表中插入表元素
         String sql = "INSERT INTO typetb (typename,imageId,selectImageId,category) VALUES (?,?,?,?)";
-        db.execSQL(sql,new Object[]{"Else", R.mipmap.ic_qita,R.mipmap.ic_qita_fs,0});
-        db.execSQL(sql,new Object[]{"Food", R.mipmap.ic_canyin,R.mipmap.ic_canyin_fs,0});
-        db.execSQL(sql,new Object[]{"Shopping", R.mipmap.ic_jiaotong,R.mipmap.ic_jiaotong_fs,0});
-        db.execSQL(sql,new Object[]{"Clothing", R.mipmap.ic_gouwu,R.mipmap.ic_gouwu_fs,0});
-        db.execSQL(sql,new Object[]{"Traffic", R.mipmap.ic_fushi,R.mipmap.ic_fushi_fs,0});
-        db.execSQL(sql,new Object[]{"Necessities", R.mipmap.ic_riyongpin,R.mipmap.ic_riyongpin_fs,0});
-        db.execSQL(sql,new Object[]{"Amusement", R.mipmap.ic_yule,R.mipmap.ic_yule_fs,0});
-        db.execSQL(sql,new Object[]{"Snack", R.mipmap.ic_lingshi,R.mipmap.ic_lingshi_fs,0});
-        db.execSQL(sql,new Object[]{"Cigarettes", R.mipmap.ic_yanjiu,R.mipmap.ic_yanjiu_fs,0});
-        db.execSQL(sql,new Object[]{"Alcohol", R.mipmap.ic_yanjiu,R.mipmap.ic_yanjiu_fs,0});
-        db.execSQL(sql,new Object[]{"Study", R.mipmap.ic_xuexi,R.mipmap.ic_xuexi_fs,0});
-        db.execSQL(sql,new Object[]{"Health", R.mipmap.ic_yiliao,R.mipmap.ic_yiliao_fs,0});
-        db.execSQL(sql,new Object[]{"Residence", R.mipmap.ic_zhufang,R.mipmap.ic_zhufang_fs,0});
-        db.execSQL(sql,new Object[]{"Utilities", R.mipmap.ic_shuidianfei,R.mipmap.ic_shuidianfei_fs,0});
-        db.execSQL(sql,new Object[]{"Communication", R.mipmap.ic_tongxun,R.mipmap.ic_tongxun_fs,0});
+        db.execSQL(sql,new Object[]{"Else", R.mipmap.ic_else_off,R.mipmap.ic_else_on,0});
+        db.execSQL(sql,new Object[]{"Food", R.mipmap.ic_food_off,R.mipmap.ic_food_on,0});
+        db.execSQL(sql,new Object[]{"Shopping", R.mipmap.ic_shopping_off,R.mipmap.ic_shopping_on,0});
+        db.execSQL(sql,new Object[]{"Clothing", R.mipmap.ic_clothing_off,R.mipmap.ic_clothing_on,0});
+        db.execSQL(sql,new Object[]{"Traffic", R.mipmap.ic_traffic_off,R.mipmap.ic_traffirc_on,0});
+        db.execSQL(sql,new Object[]{"Necessities", R.mipmap.ic_necessities_off,R.mipmap.ic_necessities_on,0});
+        db.execSQL(sql,new Object[]{"Amusement", R.mipmap.ic_amusement_off,R.mipmap.ic_amusement_on,0});
+        db.execSQL(sql,new Object[]{"Snack", R.mipmap.ic_snack_off,R.mipmap.ic_snack_on,0});
+        db.execSQL(sql,new Object[]{"Cigarettes", R.mipmap.ic_cigarettes_off,R.mipmap.ic_cigarettes_on,0});
+        db.execSQL(sql,new Object[]{"Alcohol", R.mipmap.ic_alcohol_off,R.mipmap.ic_alcohol_on,0});
+        db.execSQL(sql,new Object[]{"Study", R.mipmap.ic_study_off,R.mipmap.ic_study_on,0});
+        db.execSQL(sql,new Object[]{"Health", R.mipmap.ic_health_off,R.mipmap.ic_health_on,0});
+        db.execSQL(sql,new Object[] {"Residence", R.mipmap.ic_residence_off,R.mipmap.ic_residence_on,0});
+        db.execSQL(sql,new Object[]{"Utilities", R.mipmap.ic_utilities_off,R.mipmap.ic_utilities_on,0});
+        db.execSQL(sql,new Object[]{"Communication", R.mipmap.ic_communication_off,R.mipmap.ic_communication_on,0});
 
         //收入category-1
-        db.execSQL(sql,new Object[]{"Else", R.mipmap.ic_qita,R.mipmap.ic_qita_fs,1});
-        db.execSQL(sql,new Object[]{"Salary", R.mipmap.in_xinzi,R.mipmap.in_xinzi_fs,1});
-        db.execSQL(sql,new Object[]{"Bonus", R.mipmap.in_jiangjin,R.mipmap.in_jiangjin_fs,1});
-        db.execSQL(sql,new Object[]{"Loan", R.mipmap.in_jieru,R.mipmap.in_jieru_fs,1});
-        db.execSQL(sql,new Object[]{"Debt", R.mipmap.in_shouzhai,R.mipmap.in_shouzhai_fs,1});
-        db.execSQL(sql,new Object[]{"Interest", R.mipmap.in_lixifuji,R.mipmap.in_lixifuji_fs,1});
-        db.execSQL(sql,new Object[]{"Investment", R.mipmap.in_touzi,R.mipmap.in_touzi_fs,1});
-        db.execSQL(sql,new Object[]{"Transaction", R.mipmap.in_ershoushebei,R.mipmap.in_ershoushebei_fs,1});
-        db.execSQL(sql,new Object[]{"Windfall", R.mipmap.in_yiwai,R.mipmap.in_yiwai_fs,1});
+        db.execSQL(sql,new Object[]{"Else", R.mipmap.ic_else_off,R.mipmap.ic_else_in,1});
+        db.execSQL(sql,new Object[]{"Salary", R.mipmap.ic_salary_off,R.mipmap.ic_salary_on,1});
+        db.execSQL(sql,new Object[]{"Bonus", R.mipmap.ic_bouns_off,R.mipmap.ic_bouns_on,1});
+        db.execSQL(sql,new Object[]{"Loan", R.mipmap.ic_loan_off,R.mipmap.ic_loan_on,1});
+        //db.execSQL(sql,new Object[]{"Debt", R.mipmap.in_shouzhai,R.mipmap.in_shouzhai_fs,1});
+        db.execSQL(sql,new Object[]{"Interest", R.mipmap.ic_interest_off,R.mipmap.ic_interest_on,1});
+        db.execSQL(sql,new Object[]{"Investment", R.mipmap.ic_investment_off,R.mipmap.ic_investment_on,1});
+        //db.execSQL(sql,new Object[]{"Transaction", R.mipmap.in_ershoushebei,R.mipmap.in_ershoushebei_fs,1});
+        db.execSQL(sql,new Object[]{"Windfall", R.mipmap.ic_windfall_off,R.mipmap.ic_windfall_on,1});
 
 
 

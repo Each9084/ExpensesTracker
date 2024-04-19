@@ -63,6 +63,7 @@ public class KeyBoardUtils {
                     editable.clear();
                     break;
                 case Keyboard.KEYCODE_DONE:
+
                     onEnsureListener.onEnsure();//通过接口回调的方法，当点击确定时，可以调用这个方法
 
                     break;

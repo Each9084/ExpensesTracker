@@ -1,6 +1,8 @@
 package com.yichi.tally;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -76,6 +78,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         transactionAdapter = new TransactionAdapter(this, mDatas);
         lv_main.setAdapter(transactionAdapter);
         //loadDBDate(); 要在最后运行 不然会空指针导致异常 onResume就是最后运行的
+
+        //AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags("zh"));
+
     }
 
     private void initListView() {
@@ -113,9 +118,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //弹出是否删除某一条记录的对话框
     private void showDeleteItemDialog(final TransactionBean clickBean) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("warning").setMessage("Are you sure you want to delete?")
-                .setNegativeButton("Cancel", null)
-                .setPositiveButton("I Confirm", new DialogInterface.OnClickListener() {
+        builder.setTitle(getString(R.string.warning)).setMessage(getString(R.string.warning_content_delete_all_record1)+"\n"
+                        +getString(R.string.warning_content_delete_all_record2))
+                .setNegativeButton(getString(R.string.cancel), null)
+                .setPositiveButton(getString(R.string.iconfirm), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         int clickId = clickBean.getId();
@@ -172,23 +178,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         float expensesOneDay = DBManager.getSumMoneyOneDay(year, month, day, 0);
         float incomeOneDay = DBManager.getSumMoneyOneDay(year, month, day, 1);
         //今天的信息
-        String infoOneDay = "Today’s expenses: £" + expensesOneDay + "  Today’s income: £" + incomeOneDay;
+        String infoOneDay = getString(R.string.today_expenses_is)+getString(R.string.gbp) + expensesOneDay
+                + getString(R.string.today_income_is)+ getString(R.string.gbp) + incomeOneDay;
         //设置底部tv
 
         tv_topCondition.setText(infoOneDay);
         //获取本月
         float expensesOnMonth = DBManager.getSumMoneyOneMonth(year, month, 0);
         float incomeOnMonth = DBManager.getSumMoneyOneMonth(year, month, 1);
-        tv_topIn.setText("£" + incomeOnMonth);
-        tv_topOut.setText("£" + expensesOnMonth);
+        tv_topIn.setText(getString(R.string.gbp) + incomeOnMonth);
+        tv_topOut.setText(getString(R.string.gbp) + expensesOnMonth);
 
         //设置显示预算剩余(bmoney) 这里是start一笔后 resume期间更新tv
         float bMoney = preferences.getFloat("budgetMoney", 0);//获取到预算
         if (bMoney == 0) {
-            tv_topBudget.setText("£ 0");
+            tv_topBudget.setText(getString(R.string.gbp)+" 0");
         } else {
             float remainingBudget = bMoney - expensesOnMonth;
-            tv_topBudget.setText("£" + remainingBudget);
+            tv_topBudget.setText(getString(R.string.gbp) + remainingBudget);
         }
 
     }
@@ -255,7 +262,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //计算剩余金额
                 float expensesOneMonth = DBManager.getSumMoneyOneMonth(year, month, 0);
                 float remainingBudget = money - expensesOneMonth;
-                tv_topBudget.setText("£" + remainingBudget);
+                tv_topBudget.setText(getString(R.string.gbp) + remainingBudget);
             }
         });
     }
@@ -278,7 +285,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tv_topOut.setTransformationMethod(mask);
             // tv_topCondition.setTransformationMethod(mask);
             tv_topBudget.setTransformationMethod(mask);
-            iv_topShowHide.setImageResource(R.mipmap.ih_hide);
+            iv_topShowHide.setImageResource(R.mipmap.ih_show);
             isShow = true;  // 设置标志位隐藏
         }
     }

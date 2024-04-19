@@ -30,9 +30,74 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""/>
+            android:text="App版本:Beta 1.0"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="该app的优势："
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快，极致的快!毕竟不到5MB，真正的小而美"
+                android:textColor="@color/pressed_border_color"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试版未来更新计划：我好像还没有做修改？到时候加上，原神主题也可以到时候搞一搞"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主题：目前丑是原生开发，未引入第三方库，仅测试功能稳定性"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="承诺：目前不读取任何存储，不涉及任何隐私，不需要任何权限"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="云存储：云存储嘛，已经在做了（学生服务器快到期了，估计9月份能续上，到时候开）"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="潜在风险：我忘记一个持久化数据放哪了，不过放心，就存了些时间数据，不会拉坨大的在你寸土寸金的空间（应该不会 ^^ ）"
+            android:textColor="@color/pressed_border_color"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="如果你觉得我排版难受就对了，我就没存在string里"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有什么反馈和bug直接call我，我能给你app肯定我们认识 886 Beta 2.0版本见886"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
     </LinearLayout>
+
 
 
 

@@ -32,7 +32,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="10dp"
-            android:src="@mipmap/it_rili" />
+            android:src="@mipmap/ic_calendar" />
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"

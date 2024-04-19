@@ -6,5 +6,18 @@
     <color name="green_068006">#068006</color>
     <color name="blue_00BCD4">#00BCD4</color>
     <color name="grey_7D7D7D">#7D7D7D</color>
+    <color name="pressed_border_color">#FF4081</color>
+    <color name="pressed_color">#FFC107</color>
+    <color name="danlan">#58C0EF</color>
+
+    <!-- 夜间主题颜色 -->
+    <color name="night_background">#121212</color>
+    <color name="night_textColor">#FFFFFF</color>
+    <color name="night_accent">#FFC107</color>
+    <color name="night_secondary">#FFE082</color>
+    <!-- 其他颜色 -->
+
+
+
 
 </resources>

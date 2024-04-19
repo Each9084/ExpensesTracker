@@ -1,5 +1,6 @@
 package com.yichi.tally.utils;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -9,10 +10,11 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.yichi.tally.AboutActivity;
 import com.yichi.tally.HistoryActivity;
@@ -20,59 +22,68 @@ import com.yichi.tally.R;
 import com.yichi.tally.SettingActivity;
 import com.yichi.tally.monthlyChartActivity;
 
-//(moreDialog)
-public class SidebarDialog extends Dialog implements View.OnClickListener{
+public class SidebarDialog extends Dialog implements View.OnClickListener {
 
-    private Button btn_about;
-    private Button btn_setting;
-    private Button btn_history;
-    private Button btn_info;
-    private ImageView iv_back;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.dialog_sidebar);
-
-        btn_about = findViewById(R.id.btn_dialog_sidebar_about);
-        btn_setting = findViewById(R.id.btn_dialog_sidebar_setting);
-        btn_history = findViewById(R.id.btn_dialog_sidebar_history);
-        btn_info = findViewById(R.id.btn_dialog_sidebar_info);
-        iv_back = findViewById(R.id.iv_dialog_siderbar_back);
-
-        btn_about.setOnClickListener(this);
-        btn_setting.setOnClickListener(this);
-        btn_history.setOnClickListener(this);
-        btn_info.setOnClickListener(this);
-        iv_back.setOnClickListener(this);
-
-    }
+    private TextView btn_about, btn_setting, btn_history, btn_info;
+    private Switch switchTheme; // 添加主题切换开关
 
     public SidebarDialog(@NonNull Context context) {
         super(context);
     }
 
     @Override
-    public void onClick(View v) {
-        int id =v.getId();
-        Intent intent = new Intent();
-        if (id ==R.id.iv_dialog_siderbar_back) {
-            cancel();
-        } else if (id ==R.id.btn_dialog_sidebar_about) {
-            intent.setClass(getContext(), AboutActivity.class);
-            getContext().startActivity(intent);
-        }else if (id ==R.id.btn_dialog_sidebar_setting) {
-            intent.setClass(getContext(), SettingActivity.class);
-            getContext().startActivity(intent);
-        }else if (id ==R.id.btn_dialog_sidebar_history) {
-            intent.setClass(getContext(), HistoryActivity.class);
-            getContext().startActivity(intent);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE); // 对话框不显示标题
+        setContentView(R.layout.dialog_sidebar);
 
-        }else if (id ==R.id.btn_dialog_sidebar_info) {//账单图表
+        // 初始化控件
+        btn_about = findViewById(R.id.tv_dialog_sidebar_about);
+        btn_setting = findViewById(R.id.tv_dialog_sidebar_setting);
+        btn_history = findViewById(R.id.tv_dialog_sidebar_history);
+        btn_info = findViewById(R.id.tv_dialog_sidebar_info);
+        switchTheme = findViewById(R.id.switch_theme); // 获取主题切换的开关控件
+
+        // 设置监听器
+        btn_about.setOnClickListener(this);
+        btn_setting.setOnClickListener(this);
+        btn_history.setOnClickListener(this);
+        btn_info.setOnClickListener(this);
+
+        // 设置主题切换开关的监听器
+        switchTheme.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (getContext() instanceof Activity) {
+                Activity activity = (Activity) getContext();
+                if (isChecked) {
+                    activity.setTheme(R.style.AppTheme_Night); // 使用夜间主题
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                } else {
+                    activity.setTheme(R.style.Theme_Tally); // 使用日间主题
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
+                activity.recreate(); // 重新创建Activity来应用主题更改
+            }
+
+        });
+
+        setDialogSize(); // 设置对话框的大小和位置
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        Intent intent = new Intent();
+        if (id == R.id.tv_dialog_sidebar_about) {
+            intent.setClass(getContext(), AboutActivity.class);
+        } else if (id == R.id.tv_dialog_sidebar_setting) {
+            intent.setClass(getContext(), SettingActivity.class);
+        } else if (id == R.id.tv_dialog_sidebar_history) {
+            intent.setClass(getContext(), HistoryActivity.class);
+        } else if (id == R.id.tv_dialog_sidebar_info) {
             intent.setClass(getContext(), monthlyChartActivity.class);
-            getContext().startActivity(intent);
         }
-        cancel();
+        getContext().startActivity(intent);
+        dismiss(); // 关闭对话框
     }
 
     public void setDialogSize(){

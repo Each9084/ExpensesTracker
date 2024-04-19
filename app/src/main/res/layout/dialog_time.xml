@@ -17,7 +17,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal">
         <EditText
             android:id="@+id/et_dialog_time_hour"
             android:layout_width="60dp"

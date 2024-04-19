@@ -80,9 +80,9 @@ public class HistoryActivity extends AppCompatActivity implements View.OnClickLi
     private void deleteOneItem(TransactionBean transactionBean) {
         int id = transactionBean.getId();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("warning").setMessage("Are you sure you want to delete?")
-                .setNegativeButton("Cancel", null)
-                        .setPositiveButton("I Confirm", new DialogInterface.OnClickListener() {
+        builder.setTitle(getString(R.string.warning)).setMessage(getString(R.string.warning_content_delete_all_record1))
+                .setNegativeButton(getString(R.string.cancel), null)
+                        .setPositiveButton(getString(R.string.iconfirm), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 DBManager.deleteItemByID(id);
@@ -148,6 +148,7 @@ public class HistoryActivity extends AppCompatActivity implements View.OnClickLi
             });
         }
     }
+
 
     /**待升级：未来封装一下 用的太多了**/
 

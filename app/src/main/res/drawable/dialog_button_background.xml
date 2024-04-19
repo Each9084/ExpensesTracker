@@ -6,6 +6,4 @@
     <!--填充颜色-->
     <solid android:color="@color/white"/>
     <stroke android:color="@color/blue_00BCD4" android:width="4dp"/>
-
-
 </shape>

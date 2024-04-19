@@ -143,7 +143,7 @@ public class monthlyChartActivity extends AppCompatActivity implements View.OnCl
          * 待升级：未来应该加入判断 1个账单 为单数
          * **/
         tv_income.setText(getString(R.string.there_are)+" "
-                + numberOfIncome+" "+getString(R.string.incomes_here)
+                + numberOfIncome+" "+getString(R.string.expenses_here)
                 + " ,"+getString(R.string.gbp)+" "+sumIncomeMoney);
 
         tv_expenses.setText(getString(R.string.there_are)+" "

@@ -12,6 +12,7 @@
             android:id="@+id/iv_setting_activity_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:src="@mipmap/it_back"
             />
     </LinearLayout>
@@ -24,6 +25,28 @@
         android:textStyle="bold"
         android:background="@color/blue_00BCD4"
         />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@android:color/darker_gray"
+        />
+
+    <TextView
+        android:id="@+id/tv_setting_activity_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Delete_all_records"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@color/blue_00BCD4"
+        />
+    <Spinner
+        android:id="@+id/language_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/language_names"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp" />
 
 
 

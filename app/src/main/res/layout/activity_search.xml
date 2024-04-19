@@ -33,7 +33,7 @@
             android:id="@+id/iv_search_activity_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/search"
+            android:src="@mipmap/ic_search"
             android:layout_toStartOf="@id/et_search_activity"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
@@ -57,8 +57,9 @@
         android:text="@string/empty_text_view"
         android:gravity="center"
         android:textSize="22sp"
-        android:drawableTop="@mipmap/it_searchtext"
+
         android:layout_marginTop="250dp"/>
+    <!--android:drawableTop="@mipmap/it_searchtext"-->
 
 
 

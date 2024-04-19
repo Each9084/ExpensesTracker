@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">记账助手</string>
+    <string name="toggle_theme">切换主题</string>
+    <string name="edit">开始记录</string>
+    <string name="monthly_expenses">月度支出</string>
+    <string name="monthly_income">月度收入</string>
+    <string name="remaining_budget">剩余预算</string>
+    <string name="item_else">其他</string>
+    <string name="View_table">查看图表</string>
+    <string name="add_notes">添加备注</string>
+    <string name="dialog_note_hint">请输入备注</string>
+    <string name="dialog_note_confirm">确认</string>
+    <string name="dialog_note_cancel">取消</string>
+    <string name="dialog_time_input">请输入时间(24h)</string>
+    <string name="set_budget">设置预算</string>
+    <string name="gbp">￥</string>
+    <string name="hint_search">请输入想搜索的内容</string>
+    <string name="empty_text_view">无记录</string>
+    <string name="about">关于</string>
+    <string name="setting">设置</string>
+    <string name="details">详情</string>
+    <string name="history_record">历史记录</string>
+    <string name="transaction_info">支出详情</string>
+    <string name="history_info">这个月的花费</string>
+    <string name="history">历史</string>
+    <string name="clear">清零</string>
+    <string name="del">删除</string>
+
+    <!--数据库分类 支出-->
+    <string name="expenses_category1">Else</string>
+    <string name="expenses_category2">Food</string>
+    <string name="expenses_category3">Shopping</string>
+    <string name="expenses_category4">Clothing</string>
+    <string name="expenses_category5">Traffic</string>
+    <string name="expenses_category6">Necessities</string>
+    <string name="expenses_category7">Amusement</string>
+    <string name="expenses_category8">Snack</string>
+    <string name="expenses_category9">Cigarettes</string>
+    <string name="expenses_category10">Alcohol</string>
+    <string name="expenses_category11">Study</string>
+    <string name="expenses_category12">Health</string>
+    <string name="expenses_category13">Residence</string>
+    <string name="expenses_category14">Utilities</string>
+    <string name="expenses_category15">Communication</string>
+    <string name="Delete_all_records">删除所有记录</string>
+    <string name="chart_title">详情页面</string>
+    <string name="expenses">支出</string>
+    <string name="income">收入</string>
+    <string name="no_data">No Data</string>
+
+    <!--java-->
+    <string name="Else">其他</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+    <string name="iconfirm">我确认 !</string>
+    <string name="warning">警告</string>
+    <string name="warning_content_delete_one_item">你确定你要删除这项记录吗？</string>
+    <string name="warning_content_delete_all_record1">您确定要删除所有记录？ </string>
+    <string name="warning_content_delete_all_record2">一旦操作无法撤回</string>
+    <string name="successfully_deleted">已成功删除</string>
+    <string name="invoice">invoice:</string>
+    <string name="there_are">这里有</string>
+    <string name="incomes_here">条收入</string>
+    <string name="expenses_here">条支出</string>
+    <string name="point1">.1</string>
+    <string name="point15">.15</string>
+    <string name="point28">.28</string>
+    <string name="point31">.31</string>
+    <string name="point30">.30</string>
+    <string name="today_expenses_is">今日支出为： </string>
+    <string name="today_income_is">  今日收入为： </string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="input_cannot_be_empety">请输入金额</string>
+
+    <!--数据库分类  收入-->
+    <string name="income_category1">Else</string>
+    <string name="income_category2">Salary</string>
+    <string name="income_category3">Bonus</string>
+    <string name="income_category4">Loan</string>
+    <string name="income_category5">Debt</string>
+    <string name="income_category6">Interest</string>
+    <string name="income_category7">Investment</string>
+    <string name="income_category8">Transaction</string>
+    <string name="income_category9">Windfall</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

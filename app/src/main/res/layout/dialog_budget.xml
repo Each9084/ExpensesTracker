@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:src="@mipmap/ih_error" />
+        android:src="@mipmap/ic_cancel" />
 
     <TextView
         android:id="@+id/tv_dialog_budget_money_sign"

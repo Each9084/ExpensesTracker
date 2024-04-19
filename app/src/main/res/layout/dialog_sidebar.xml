@@ -1,48 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_f3f3f3">
+    android:background="@color/grey_f3f3f3"
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="250dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <ImageView
-            android:id="@+id/iv_dialog_siderbar_back"
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/siderbar_backgorund" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_dialog_sidebar_about"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ih_error"
-            android:layout_gravity="end"
+            android:layout_marginStart="10dp"
+            android:drawableLeft="@mipmap/ic_about"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:text="@string/about" />
+
+
+        <TextView
+            android:id="@+id/tv_dialog_sidebar_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:drawableLeft="@mipmap/ic_history"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:text="@string/history" />
+
+        <TextView
+            android:id="@+id/tv_dialog_sidebar_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:drawableLeft="@mipmap/ic_details"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:text="@string/details" />
+
+        <TextView
+            android:id="@+id/tv_dialog_sidebar_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:drawableLeft="@mipmap/ic_setting"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:text="@string/setting" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <Switch
+            android:id="@+id/switch_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"/>
-        <Button
-            android:id="@+id/btn_dialog_sidebar_about"
-            android:layout_width="match_parent"
-            style="@style/dialog_siderbar_button_style"
-            android:drawableTop="@mipmap/it_guanyu"
-            android:text="@string/about"/>
-        <Button
-            android:id="@+id/btn_dialog_sidebar_setting"
-            android:layout_width="match_parent"
-            style="@style/dialog_siderbar_button_style"
-            android:drawableTop="@mipmap/it_shezhi"
-            android:text="@string/setting"/>
-        <Button
-            android:id="@+id/btn_dialog_sidebar_history"
-            android:layout_width="match_parent"
-            style="@style/dialog_siderbar_button_style"
-            android:drawableTop="@mipmap/it_jilu"
-            android:text="@string/about"/>
-        <Button
-            android:id="@+id/btn_dialog_sidebar_info"
-            android:layout_width="match_parent"
-            style="@style/dialog_siderbar_button_style"
-            android:drawableTop="@mipmap/it_xiqing"
-            android:text="@string/about"/>
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/toggle_theme"
+            android:checked="false"/>
 
 
 
+
+        <!--
+         <Button
+             android:id="@+id/btn_dialog_sidebar_about"
+             android:layout_width="match_parent"
+             style="@style/dialog_siderbar_button_style"
+             android:drawableTop="@mipmap/ic_about"
+             android:text="@string/about"/>
+         <Button
+             android:id="@+id/btn_dialog_sidebar_setting"
+             android:layout_width="match_parent"
+             style="@style/dialog_siderbar_button_style"
+             android:drawableTop="@mipmap/ic_setting"
+             android:text="@string/setting"/>
+         <Button
+             android:id="@+id/btn_dialog_sidebar_history"
+             android:layout_width="match_parent"
+             style="@style/dialog_siderbar_button_style"
+             android:drawableTop="@mipmap/ic_history"
+             android:text="@string/history"/>
+         <Button
+             android:id="@+id/btn_dialog_sidebar_info"
+             android:layout_width="match_parent"
+             style="@style/dialog_siderbar_button_style"
+             android:drawableTop="@mipmap/ic_details"
+             android:text="@string/details"/>
+         -->
 
 
     </LinearLayout>

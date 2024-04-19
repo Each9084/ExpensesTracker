@@ -13,7 +13,7 @@
             android:id="@+id/iv_record_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@mipmap/ih_error"
+            android:src="@mipmap/ic_cancel"
             android:onClick="onClick"
             android:layout_marginStart="10dp"/>
 

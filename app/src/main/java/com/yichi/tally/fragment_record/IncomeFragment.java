@@ -19,8 +19,8 @@ public class IncomeFragment extends expensesFragment {
         typeList.addAll(inList);
         //通知适配器数据已经改变，需要更新UI显示的方法。
         adapter.notifyDataSetChanged();
-        tv_type.setText("其他");
-        iv_type.setImageResource(R.mipmap.in_qt_fs);
+        tv_type.setText(getString(R.string.Else));
+        iv_type.setImageResource(R.mipmap.ic_else_in);
     }
 
     @Override

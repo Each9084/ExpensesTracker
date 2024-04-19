@@ -17,12 +17,12 @@
         android:id="@+id/gv_dialog_calendar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="4"/>
+        android:numColumns="5"/>
     <ImageView
         android:id="@+id/iv_dialog_calendar_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ih_error"
+        android:src="@mipmap/ic_cancel"
         android:padding="20dp"
         />
 </LinearLayout>

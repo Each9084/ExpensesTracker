@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.yichi.tally.R;
 import com.yichi.tally.database.DBManager;
@@ -55,8 +56,8 @@ public abstract class expensesFragment extends Fragment implements View.OnClickL
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         transactionBean = new TransactionBean();//初始化对象 利用其进行后续操作
-        transactionBean.setTypename("Else");
-        transactionBean.setSelectImageId(R.mipmap.ic_qita_fs);
+        transactionBean.setTypename(getString(R.string.Else));
+        transactionBean.setSelectImageId(R.mipmap.ic_else_on);
 
 
     }
@@ -119,7 +120,7 @@ public abstract class expensesFragment extends Fragment implements View.OnClickL
                 //R.id.et_fragment_record_money
                 String moneyStr = et_money.getText().toString();
                 if (TextUtils.isEmpty(moneyStr)||moneyStr.equals("0")) {
-                    getActivity().finish();
+                    Toast.makeText(getContext(), getString(R.string.input_cannot_be_empety), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 float money = Float.parseFloat(moneyStr);

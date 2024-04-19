@@ -9,12 +9,13 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import java.util.List;
 
 public class RecordPagerAdapter extends FragmentPagerAdapter {
-    List<Fragment> fragmentList;
-        String[]titles = {"Expenses","Income"};
+    private List<Fragment> fragmentList;
+    private String[] titles;
 
-    public RecordPagerAdapter(@NonNull FragmentManager fm,List<Fragment> fragmentList) {
+    public RecordPagerAdapter(@NonNull FragmentManager fm, List<Fragment> fragmentList, String[] titles) {
         super(fm);
         this.fragmentList = fragmentList;
+        this.titles = titles; // 接收标题数组
     }
 
     @NonNull

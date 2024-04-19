@@ -47,9 +47,12 @@ public class RecordActivity extends AppCompatActivity implements View.OnClickLis
         IncomeFragment incomeFragment = new IncomeFragment();
         fragmentList.add(outcomeFragment);
         fragmentList.add(incomeFragment);
+// 创建标题数组，使用字符串资源替换
+        String[] titles = {getString(R.string.expenses), getString(R.string.income)};
 
-        //创建适配器
-        RecordPagerAdapter recordPagerAdapter = new RecordPagerAdapter(getSupportFragmentManager(), fragmentList);
+        // 创建适配器时使用标题数组
+        RecordPagerAdapter recordPagerAdapter = new RecordPagerAdapter(getSupportFragmentManager(), fragmentList, titles);
+
         //设置适配器 设置titles 【expenses income】
         vp_record.setAdapter(recordPagerAdapter);
         //将TabLayout和ViewPager进行关联 滑动上部导航栏【支出】会使viewpager滑动改变里面的gridview 实现它们之间的联动效果。
