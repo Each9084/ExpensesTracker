@@ -5,6 +5,13 @@
     android:background="@color/white"
     android:padding="10dp">
 
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/tv_dialog_budget_title"
+        android:src="@mipmap/ic_budget"
+        android:layout_marginEnd="5dp"/>
     <TextView
         android:id="@+id/tv_dialog_budget_title"
         android:layout_width="wrap_content"

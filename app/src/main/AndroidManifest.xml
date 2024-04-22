@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".GlobalApp"
+        android:name="com.yichi.expenseTracker.GlobalApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,25 +14,25 @@
         android:theme="@style/Theme.Tally"
         tools:targetApi="31">
         <activity
-            android:name=".monthlyChartActivity"
+            android:name="com.yichi.expenseTracker.monthlyChartActivity"
             android:exported="false" />
         <activity
-            android:name=".SettingActivity"
+            android:name="com.yichi.expenseTracker.sidebar.SettingActivity"
             android:exported="false" />
         <activity
-            android:name=".HistoryActivity"
+            android:name="com.yichi.expenseTracker.sidebar.HistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".AboutActivity"
+            android:name="com.yichi.expenseTracker.sidebar.AboutActivity"
             android:exported="false" />
         <activity
-            android:name=".SearchActivity"
+            android:name="com.yichi.expenseTracker.SearchActivity"
             android:exported="false" />
         <activity
-            android:name=".RecordActivity"
+            android:name="com.yichi.expenseTracker.RecordActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.yichi.expenseTracker.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

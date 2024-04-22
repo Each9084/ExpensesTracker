@@ -41,7 +41,6 @@
             android:layout_alignParentEnd="true"
             android:padding="10dp"/>
 
-        
     </RelativeLayout>
 
     <!--未来尝试换成RecyclerView-->
@@ -51,15 +50,19 @@
         android:layout_height="match_parent"
         android:layout_below="@id/main_top_layout"
         android:layout_marginTop="10dp"
+        android:background="@color/grey_f3f3f3"
         android:divider="@null"
         android:dividerHeight="6dp"
         android:padding="10dp"
-        android:scrollbars="none"
-        android:background="@color/grey_f3f3f3"
-        />
+        android:scrollbars="none" />
 
-    <!--右下角更多按钮按钮-->
-
+    <!--在 ListView 上方叠加的 ImageView-->
+    <ImageView
+        android:id="@+id/image_overlay"
+        android:layout_width="400dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/list_gress_background_bottom" /> <!-- 更换为您的图片资源 -->
 
     <!--START按钮-->
     <Button
@@ -68,20 +71,17 @@
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/main_recordbtn_background"
+        android:background="@drawable/selector_start_button"
         android:text="@string/edit"
-        android:layout_margin="20dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="20dp"
         android:textStyle="bold"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:drawableLeft="@mipmap/ic_edit"
         android:paddingStart="10dp"
         android:drawablePadding="10dp"
         android:paddingEnd="15dp"
-        android:gravity="center_vertical"/>
-
-
-
-
-
+        android:gravity="center_vertical"
+        />
 
 </RelativeLayout>

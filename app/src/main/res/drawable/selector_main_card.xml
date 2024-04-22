@@ -1,0 +1,31 @@
+<!-- button_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按下状态 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp" />
+            <gradient
+                android:startColor="#406DAEFF"
+                android:endColor="#4051A1E7"
+                android:angle="270"/>
+            <padding android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp" />
+        </shape>
+    </item>
+
+    <!-- 默认状态 -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp" />
+            <gradient
+                android:startColor="#4051A1E7"
+                android:endColor="#406DAEFF"
+                android:angle="270"/>
+            <stroke
+                android:width="3dp"
+                android:color="#406DAEFF" />
+            <padding android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp" />
+        </shape>
+    </item>
+
+</selector>

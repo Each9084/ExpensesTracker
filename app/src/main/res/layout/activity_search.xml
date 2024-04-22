@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/grey_f3f3f3">
+   android:background="@mipmap/list_background">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp">
@@ -46,10 +46,10 @@
     android:id="@+id/lv_search_activity"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:dividerHeight="6dp"
+    android:dividerHeight="3dp"
     android:divider="@color/blue_00BCD4"
     />
-    
+
     <TextView
         android:id="@+id/tv_search_activity_empty"
         android:layout_width="match_parent"
